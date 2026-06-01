@@ -2,81 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BCM Training Blog</title>
+    <title>BCM AI Blog</title>
+
+    <!-- Chart.js (for dashboard) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
+            margin: 0;
+            background-color: #f4f6f8;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1000px;
             margin: auto;
             padding: 20px;
-            background-color: #f8f9fa;
         }
-        h1 {
-            color: #333;
-        }
+
         .post {
             background: white;
             padding: 20px;
             margin-top: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .date {
-            color: gray;
-            font-size: 0.9em;
+
+        .dashboard {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px;
         }
     </style>
 </head>
+
 <body>
 
-<h1>BCM AI Training Blog</h1>
-<p>Demonstration of AI Agent Content Workflow</p>
+<header>
+    <h1>BCM AI Blog Platform</h1>
+    <p>AI Agent Powered Content Workflow</p>
+</header>
 
-<div class="post">
-    <h2>How to Write High-Quality Audit Reports</h2>
-    <p class="date">Published: June 2026</p>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Blog</a>
+    <a href="#">Analytics</a>
+</nav>
 
-    <h3>Introduction</h3>
-    <p>
-        Writing effective audit reports is essential for communicating findings clearly, enabling informed decision-making, and ensuring actionable outcomes. High-quality reports should be structured, concise, and aligned with professional standards.
-    </p>
+<div class="container">
 
-    <h3>Key Principles</h3>
-    <ul>
-        <li>Clarity and conciseness</li>
-        <li>Objectivity and evidence-based conclusions</li>
-        <li>Consistency in structure and formatting</li>
-        <li>Focus on actionable recommendations</li>
-    </ul>
+    <!-- Dashboard -->
+    <h2>📊 Blog Performance Dashboard</h2>
 
-    <h3>Structure of an Audit Report</h3>
-    <ul>
-        <li>Executive Summary</li>
-        <li>Scope and Objectives</li>
-        <li>Methodology</li>
-        <li>Findings and Observations</li>
-        <li>Recommendations</li>
-        <li>Conclusion</li>
-    </ul>
+    <div class="dashboard">
+        <div class="card">
+            <h3>1200</h3>
+            <p>Total Views</p>
+        </div>
+        <div class="card">
+            <h3>+25%</h3>
+            <p>Weekly Growth</p>
+        </div>
+        <div class="card">
+            <h3>65%</h3>
+            <p>Bounce Rate</p>
+        </div>
+    </div>
 
-    <h3>Writing Findings (Best Practice)</h3>
-    <ul>
-        <li><b>Condition:</b> What was observed</li>
-        <li><b>Cause:</b> Why it occurred</li>
-        <li><b>Consequence:</b> Impact of the issue</li>
-        <li><b>Recommendation:</b> Suggested remediation</li>
-    </ul>
+    <canvas id="analyticsChart"></canvas>
 
-    <h3>Common Mistakes to Avoid</h3>
-    <ul>
-        <li>Overly technical language</li>
-        <li>Lack of clear recommendations</li>
-        <li>Unstructured or inconsistent findings</li>
-        <li>Excessive detail without clarity</li>
-    </ul>
+    <!-- Blog Post -->
+    <div class="post">
+        <h2>How to Write High-Quality Audit Reports</h2>
+
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40">
+
+        <h3>Introduction</h3>
+        <p>
+            High-quality audit reporting is essential for communicating risks clearly 
+            and enabling effective decision-making.
+        </p>
+
+        <h3>Key Principles</h3>
+        <ul>
+            <li>Clarity and conciseness</li>
+            <li>Objective evidence-based reporting</li>
+            <li>Structured findings</li>
+        </ul>
+
+        <h3>Findings Structure</h3>
+        <ul>
+            <li><b>Condition</b></li>
+            <li><b>Cause</b></li>
+            <li><b>Consequence</b></li>
+            <li><b>Recommendation</b></li>
+        </ul>
+
+        <h3>Conclusion</h3>
+        <p>
+            Effective reporting ensures insights are actionable and aligned with business outcomes.
+        </p>
+    </div>
 
 </div>
 
+<script>
+const ctx = document.getElementById('analyticsChart');
+
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Mon','Tue','Wed','Thu','Fri'],
+        datasets: [{
+            label: 'Views',
+            data: [200, 300, 400, 500, 600],
+            borderWidth: 2
+        }]
+    }
+});
+</script>
+
 </body>
 </html>
-``
