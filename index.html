@@ -7,13 +7,13 @@
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background: url("https://images.unsplash.com/photo-1517649763962-0c623066013b") no-repeat center center fixed;
       background-size: cover;
     }
 
     .overlay {
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.9);
       min-height: 100vh;
       padding: 50px 20px;
     }
@@ -24,85 +24,42 @@
     }
 
     h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
       color: #0a5f2c;
-    }
-
-    .subtitle {
-      color: #555;
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-      margin-top: 40px;
     }
 
     .post {
       background: white;
       padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-      transition: 0.2s;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .post:hover {
-      transform: translateY(-3px);
-    }
-
-    .post-title a {
-      font-size: 20px;
+    a {
       text-decoration: none;
       color: #0a5f2c;
       font-weight: bold;
-    }
-
-    .post-title a:hover {
-      text-decoration: underline;
-    }
-
-    .post-date {
-      font-size: 13px;
-      color: gray;
-      margin-top: 5px;
-      margin-bottom: 10px;
-    }
-
-    .post-summary {
-      color: #333;
     }
   </style>
 </head>
 
 <body>
-
   <div class="overlay">
     <div class="container">
 
       <h1>Harry Zhang</h1>
-      <p class="subtitle">
-        Personal blog on golf trends, equipment, and how the game is evolving.
-      </p>
+      <p>Personal blog on golf trends and insights.</p>
 
       <h2>Articles</h2>
 
-      <!-- SINGLE POST (NO DUPLICATE) -->
+      <!-- ONLY ONE POST -->
       <div class="post">
-        <div class="post-title">
-          <a href="posts/golf-2026.html">Golf in 2026: What Actually Matters</a>
-        </div>
-        <div class="post-date">June 3, 2026</div>
-        <div class="post-summary">
-          A breakdown of how golf is evolving in 2026—covering data-driven training, 
-          forgiveness over distance, indoor golf growth, and personalization.
-        </div>
+        posts/golf-2026.htmlGolf in 2026: What Actually Matters</a>
+        <p>June 3, 2026</p>
+        <p>A breakdown of how golf is evolving in 2026.</p>
       </div>
 
     </div>
   </div>
-
 </body>
 </html>
