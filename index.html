@@ -7,8 +7,8 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url("https://images.unsplash.com/photo-1517649763962-0c623066013b") no-repeat center center fixed;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: url("https://images.unsplash.com/photo-1592919505780-303950717480") no-repeat center center fixed;
       background-size: cover;
     }
 
@@ -25,20 +25,41 @@
 
     h1 {
       color: #0a5f2c;
+      font-size: 32px;
+    }
+
+    .subtitle {
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    h2 {
+      margin-top: 30px;
     }
 
     .post {
       background: white;
       padding: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-top: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
-    a {
+    .post-title a {
       text-decoration: none;
       color: #0a5f2c;
+      font-size: 20px;
       font-weight: bold;
+    }
+
+    .post-title a:hover {
+      text-decoration: underline;
+    }
+
+    .post-date {
+      font-size: 13px;
+      color: gray;
+      margin: 8px 0;
     }
   </style>
 </head>
@@ -48,14 +69,18 @@
     <div class="container">
 
       <h1>Harry Zhang</h1>
-      <p>Personal blog on golf trends and insights.</p>
+      <p class="subtitle">
+        Personal blog on golf trends, equipment, and how the game is evolving.
+      </p>
 
       <h2>Articles</h2>
 
-      <!-- ONLY ONE POST -->
+      <!-- ✅ FIXED LINK -->
       <div class="post">
-        posts/golf-2026.htmlGolf in 2026: What Actually Matters</a>
-        <p>June 3, 2026</p>
+        <div class="post-title">
+          <a href="posts/golf-2026.html">Golf in 2026: What Actually Matters</a>
+        </div>
+        <div class="post-date">June 3, 2026</div>
         <p>A breakdown of how golf is evolving in 2026.</p>
       </div>
 
